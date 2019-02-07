@@ -1,0 +1,15 @@
+.idea/
+ssl/
+*.iml
+*.iws
+*.eml
+out/
+.DS_Store
+.svn
+ssl
+log/*.log
+tmp/**
+node_modules/
+.sass-cache
+css/reveal.min.css
+js/reveal.min.js
