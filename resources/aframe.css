@@ -1,0 +1,179 @@
+/*********************************************
+ *  BY KEVIN NGO, from the AFRame Presentation Kit
+ *********************************************/
+.state--bg-dark body {
+  background: #111;
+}
+
+.state--bg-dark h2,
+.state--bg-dark p {
+  color: #FAFAFA;
+}
+
+.state--bg-blue body {
+  background: #30D8FC;
+}
+
+.state--bg-white body {
+  background: #FFF;
+}
+
+[data-background] h1,
+[data-background] h2,
+[data-background] li,
+[data-background] p,
+[data-background] i,
+[data-background-video] h1,
+[data-background-video] h2,
+[data-background-video] li,
+[data-background-video] p {
+  color: #FAFAFA;
+  text-shadow: 1px 1px 2px #333;
+}
+
+[data-background].dark-text h1,
+[data-background].dark-text h2,
+[data-background].dark-text li,
+[data-background].dark-text p,
+[data-background-video].dark-text h1,
+[data-background-video].dark-text h2,
+[data-background-video].dark-text li,
+[data-background-video].dark-text p {
+  color: #333;
+  text-shadow: 1px 1px 2px #FAFAFA;
+}
+
+.reveal section a {
+  color: #24CAFF;
+  cursor: pointer;
+}
+
+.reveal section a:hover {
+  color: #B96FD3;
+}
+
+.reveal section ul {
+  list-style: square;
+  margin-left: 0;
+}
+
+.image-row {
+  align-items: center;
+  display: flex;
+}
+
+.image-row.small img {
+  max-height: 128px !important;
+  max-width: 128px !important;
+}
+
+.image-row div {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+}
+
+.captioned-image-row {
+  display: flex;
+  margin-bottom: 30px !important;
+}
+
+.captioned-image-row.small img {
+  max-height: 128px !important;
+  max-width: 128px !important;
+}
+
+.captioned-image-row div {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.aframe-scene,
+[data-aframe-scene] {
+  margin: 0 auto !important;
+  height: 100%;
+  width: 100%;
+}
+
+.aframe-scene canvas,
+[data-aframe-scene] canvas {
+  background: #DADADA;
+}
+
+body:not(.aframe-inspector-opened) .toggle-edit {
+  display: none;
+}
+
+.slide__title {
+  height: 100%;
+  width: 100%;
+}
+
+.slide__title h1,
+.slide__title h2,
+.slide__title p {
+  padding: 15px 30px;
+}
+
+.talk-info {
+  font-weight: 200;
+  position: relative;
+  top: 230px;
+}
+
+div.slide__boilerplate {
+  color: #333;
+  display: flex;
+  flex-wrap: wrap;
+  font-style: italic;
+  justify-content: space-around;
+  padding: 0 5%;
+  position: absolute;
+  z-index: 1;
+}
+
+div.slide__boilerplate p {
+  background: #FAFAFA;
+  color: #333;
+  font-size: 32px;
+  font-weight: 300;
+  margin-right: 48px;
+  opacity: 0.8;
+  padding: 4px 15px;
+  text-transform: uppercase;
+  text-shadow: none;
+}
+
+div.slide__boilerplate + video {
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.reveal li {
+  margin: 30px 0;
+}
+
+.reveal .icon-title {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.reveal .icon-title img {
+  margin: 0;
+  padding-right: 15px;
+}
+
+.reveal .icon-title h2 {
+  margin: 0;
+}
+
+.aframe-inspector-opened .slides {
+  margin: 0 !important;
+  zoom: 1 !important;
+}

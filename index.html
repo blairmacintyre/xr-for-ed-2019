@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>HRI MR Workshop 2018: Making the Hidden Visible</title>
+		
+		<meta name="description" content="HRI MR Workshop 2018: Making the Hidden Visible">
+		<meta name="author" content="Blair MacIntyre">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/ar-moz.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<script src="resources/webxr/examples/libs/three.min.js"></script>
+		<script src="resources/webxr/examples/libs/loaders/BinaryLoader.js"></script>
+		<script src="resources/webxr/examples/models/TeapotBufferGeometry.js"></script>
+		<script src="resources/webxr/examples/libs/three-gltf-loader.js"></script>
+
+		<script src="resources/webxr/examples/libs/shaders/ConvolutionShader.js"></script>
+		<script src="resources/webxr/examples/libs/shaders/CopyShader.js"></script>
+		<script src="resources/webxr/examples/libs/shaders/FilmShader.js"></script>
+		<script src="resources/webxr/examples/libs/shaders/FocusShader.js"></script>
+
+		<script src="resources/webxr/examples/libs/postprocessing/EffectComposer.js"></script>
+		<script src="resources/webxr/examples/libs/postprocessing/MaskPass.js"></script>
+		<script src="resources/webxr/examples/libs/postprocessing/RenderPass.js"></script>
+		<script src="resources/webxr/examples/libs/postprocessing/BloomPass.js"></script>
+		<script src="resources/webxr/examples/libs/postprocessing/ShaderPass.js"></script>
+		<script src="resources/webxr/examples/libs/postprocessing/FilmPass.js"></script>
+
+		<script type="module" src="resources/webxr/polyfill/XRPolyfill.js"></script>
+		<script nomodule src="resources/webxr/dist/webxr-polyfill.js"></script>
+
+		<script src="resources/webxr/examples/common.js"></script>
+
+		<!--
+		<script src="resources/js/aframe-v0.5.0.js"></script>
+
+		<script src="resources/js/aframe-look-at-component.js"></script>
+		-->
+		<link rel="stylesheet" type="text/css" href="resources/style.css">
+		<link rel="stylesheet" type="text/css" href="resources/aframe.css">
+	    <link rel="stylesheet" href="resources/css/font-awesome.min.css">
+
+		<!-- refs:  http://www.imore.com/pokemon-go for the PG pic 
+		-->
+	</head>
+
+	<body style="visibility: visible;">
+		<div id="target"></div>
+		
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides" data-background="transparent">
+
+				<!--
+				Slides!
+				-->
+				<!-- .slide: data-background="media/img/aframe.jpg" -->
+
+				<section data-markdown="slides/0-intro.md"
+						data-separator="\r?\n------\r?\n"
+						data-separator-vertical="\r?\n---\r?\n"
+						data-separator-notes="<!-- NOTES -->">
+				</section>
+
+				<section data-markdown="slides/1-projects.md"
+						data-separator="\r?\n------\r?\n"
+						data-separator-vertical="\r?\n---\r?\n"
+						data-separator-notes="<!-- NOTES -->">
+				</section>
+
+				<section data-markdown="slides/2-webxr.md"
+						data-separator="\r?\n------\r?\n"
+						data-separator-vertical="\r?\n---\r?\n"
+						data-separator-notes="<!-- NOTES -->">
+				</section>
+
+				<section data-markdown="slides/10-closing.md"
+						data-separator="\r?\n------\r?\n"
+						data-separator-vertical="\r?\n---\r?\n"
+						data-separator-notes="<!-- NOTES -->">
+				</section>
+
+			</div>
+		</div>
+		
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+				overview: false,
+				width: 1280,
+				height: 720,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				multiplex: {
+					// Example values. To generate your own, see the socket.io server instructions.
+					//secret: '15088615335791853589', // Obtained from the socket.io server. Gives this (the master) control of the presentation
+					secret: null, // Obtained from the socket.io server. Gives this (the master) control of the presentation
+					id: 'f3727025a8df61c7', // Obtained from socket.io server
+					url: 'blair-reveal-server.glitch.me' // Location of your socket.io server
+				},
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
+					{ src: 'plugin/multiplex/master.js', async: true },
+					{ src: 'plugin/multiplex/client.js', async: true },
+
+	//					{ src: 'socket.io/socket.io.js', async: true },
+	//					{ src: 'plugin/notes-server/client.js', async: true },
+
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+
+<script src="resources/app-3d.js"></script>
+		
+		<style type="text/css">
+			/* 1. Style header/footer <div> so they are positioned as desired. */
+			#header-left {
+				position: absolute;
+				top: 0%;
+				left: 0%;
+			}
+			#header-right {
+				position: absolute;
+				top: 0%;
+				right: 0%;
+				text-align: right;
+			}
+			#footer-left {
+				position: absolute;
+				bottom: 0%;
+				left: 0%;
+			}
+			#footer-right {
+				position: absolute;
+				bottom: 0%;
+				right: 0%;
+				text-align: right;
+			}
+		</style>
+
+		<!-- 2. Create hidden header/footer <div> -->
+		<div id="hidden" style="display:none;">
+			<div id="header">
+				<div id="header-left"></div>
+				<div id="header-right"></div>
+				<div id="footer-left"><img src="resources/moz-logo-orange-rgb.svg" alt="mozilla logo" width="20%" /></div>
+				<!--div id="footer-right"><img src="resources/GTlogo-light.png" alt="ael logo" width="8%" /></div-->
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script type="text/javascript">
+			// 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+			var header = $('#header').html();
+			if ( window.location.search.match( /print-pdf/gi ) ) {
+				Reveal.addEventListener( 'ready', function( event ) {
+					$('.slide-background').append(header);
+				});
+			}
+			else {
+				Reveal.addEventListener( 'ready', function( event ) {
+					var b = document.getElementsByClassName('pause-overlay');
+					var h = document.getElementById("header");
+					var p = b[0].parentNode;
+					p.insertBefore(h,b[0]);
+				});
+		}
+		</script>
+ 	 </body>
+</html>

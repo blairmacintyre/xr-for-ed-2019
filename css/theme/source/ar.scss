@@ -1,0 +1,115 @@
+/**
+ * Sky theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+
+// Include theme-specific fonts
+@import url(../../lib/font/league-gothic/league-gothic.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+// Override theme settings (see ../template/settings.scss)
+$headingTextShadow: 0 2px 4px #c9c9c9, 1px 3px 4px #bbb, 1px 6px 4px rgba(0,0,0,.1), 0 0 6px rgba(0,0,0,.1), 0 1px 6px rgba(0,0,0,.3), 0 3px 8px rgba(0,0,0,.2), 0 5px 10px rgba(100,100,100,.25), 0 20px 20px rgba(0,0,0,.15);
+
+//0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 20px 20px rgba(0,0,0,.15);
+$heading1TextShadow: 0 2px 4px #c9c9c9, 1px 3px 4px #bbb, 1px 6px 4px rgba(0,0,0,.1), 0 0 6px rgba(0,0,0,.1), 0 1px 6px rgba(0,0,0,.3), 0 3px 8px rgba(0,0,0,.2), 0 5px 10px rgba(100,100,100,.25), 0 20px 20px rgba(0,0,0,.15);
+
+//0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(100,100,100,.25), 0 20px 20px rgba(0,0,0,.15);
+
+$backgroundColor: transparent;
+
+.reveal .slides section .red {
+	color: #ff2c2d
+}
+.reveal .slides section .green {
+	color: #17ff2e;
+}
+.reveal .slides section .blue {
+	color: #1b91ff;
+}
+
+.reveal table.thickhead th {
+	text-align: left;
+	padding: 0.2em 0.5em 0.2em 0.5em;
+	border-bottom: 4px solid;
+}
+
+.reveal table[border="none"],
+.reveal table th[border="none"],
+.reveal table tr[border="none"],
+.reveal table td[border="none"] {
+	border: 0px;
+	border-bottom: 0px;
+}
+
+.reveal table.noborder,
+.reveal table.noborder th,
+.reveal table.noborder tr,
+.reveal table.noborder td,
+ {
+	border: 0px;
+	border-bottom: 0px;
+}
+
+// Fix links so they are not cut off
+.reveal a {
+	line-height: 1.3em;
+}
+
+.xrslide {
+	visibility: visible;
+	transition: all 1s ease;
+}
+
+.xrslide .reveal {
+	text-shadow: 0 2px 4px #c9c9c9, 1px 3px 4px #bbb, 1px 6px 4px rgba(0,0,0,.1), 0 0 6px rgba(0,0,0,.1), 0 1px 6px rgba(0,0,0,.3), 0 3px 8px rgba(0,0,0,.2), 0 5px 10px rgba(100,100,100,.25), 0 20px 20px rgba(0,0,0,.15);
+}
+
+.reveal pre {
+	text-shadow: none;
+}
+
+.reveal.slide {
+	z-index: 1;
+}
+
+/*********************************************
+ * PAUSED MODE
+ * In XR, we want paused mode to NOT show the overlay, 
+ * but instead of hide the main body content and let the video 
+ * show through
+ *********************************************/
+
+.reveal.paused .pause-overlay {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.reveal.paused .backgrounds {
+	visibility: hidden;
+	opacity: 0;
+	transition: all 1s ease;
+}
+
+.reveal.paused .slides {
+	visibility: hidden;
+	opacity: 0;
+	transition: all 1s ease;
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
