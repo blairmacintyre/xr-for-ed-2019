@@ -1,7 +1,7 @@
 
 <!-- .slide: data-background="resources/textures/ironman.png" -->
 
-<h2>Potential of the Web as <br>an AR/VR Platform for HRI?</h2>
+<h2>Potential of the Web as <br>an AR/VR Platform for Education</h2>
 <br>
 <br>
 <br>
